@@ -46,6 +46,7 @@ php webman build:bin 8.1
 * 运行过程中会在webman.bin所在目录生成runtime目录，用于存放日志文件
 * 目前webman.bin不会读取外部任何php.ini文件
 * webman.bin文件体积至少30M，加上业务代码体积会很大，建议在`app/functions.php`首行加入`ini_set('memory_limit', '512M');`提高PHP内存限制，避免出现内存超限错误
+* ini配置请参考，[INI settings](https://github.com/easysoft/phpmicro/wiki/INI-settings)，原理是将ini的bin文件拼接在phar文件之前即可。
 
 ## 单独下载静态PHP
 有时候你只是不想部署PHP环境，只需要一个PHP可执行文件，点击请点击这里下载[静态php下载](https://www.workerman.net/download)
